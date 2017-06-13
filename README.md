@@ -1,4 +1,4 @@
-# thinkphp-bjyblog
+# thinkphp-bjyblog（转）
 
 ## 链接
 - 博客：http://baijunyao.com   
