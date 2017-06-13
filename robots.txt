@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: 
 Sitemap: http://baijunyao.com/sitemap.xml
+test
