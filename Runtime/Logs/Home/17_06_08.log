@@ -1,0 +1,45 @@
+[ 2017-06-08T18:27:06+08:00 ] 106.120.122.2 /hyblog/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0048s ]
+SQL: SELECT `aid`,`title` FROM `article` WHERE `is_show` = 1 AND `is_delete` = 0 AND `is_top` = 1 ORDER BY aid desc  [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `oauth_user` [ RunTime:0.0046s ]
+SQL: SELECT `id` FROM `oauth_user` WHERE (  is_admin )  [ RunTime:0.0043s ]
+SQL: SELECT c.content,c.date,a.title,a.aid,ou.nickname,ou.head_img FROM comment c INNER JOIN article a ON c.aid=a.aid INNER JOIN oauth_user ou ON c.ouid=ou.id  WHERE c.is_delete = 0 ORDER BY c.date desc LIMIT 20   [ RunTime:0.0045s ]
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/hyblog/Application/Common/Model/CommentModel.class.php 第 202 行.
+SQL: SHOW COLUMNS FROM `category` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `category` ORDER BY sort  [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `tag` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `tag`  [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article_tag` WHERE `tid` = 20 LIMIT 1   [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `link` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `link` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY sort  [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `article` [ RunTime:0.0046s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `article` WHERE `is_delete` = 0 AND `is_show` = 1 LIMIT 1   [ RunTime:0.0043s ]
+SQL: SELECT * FROM `article` WHERE `is_delete` = 0 AND `is_show` = 1 ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `article_tag` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `article_tag` INNER JOIN tag ON article_tag.tid=tag.tid  WHERE `aid` = '17'  [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `article_pic` [ RunTime:0.0046s ]
+SQL: SELECT `path` FROM `article_pic` WHERE `aid` = 17 ORDER BY ap_id asc LIMIT 1   [ RunTime:0.0043s ]
+SQL: SELECT `cid`,`cid`,`cname` FROM `category` WHERE `cid` = 28  [ RunTime:0.0043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Use of undefined constant url - assumed 'url' /var/www/html/hyblog/Runtime/Cache/Home/08d30c77e78bd0ac29232fbc421b5dcd.php 第 6 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000275s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000317s ]
+
