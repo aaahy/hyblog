@@ -26,8 +26,8 @@ if(@$_GET['c']=='success'){
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $data=$_POST;
         // 连接数据库
-        //$link=@new mysqli("{$data['DB_HOST']}:{$data['DB_PORT']}",$data['DB_USER'],$data['DB_PWD']);有bug
-        $link=@new mysqli($data['DB_HOST'],$data['DB_USER'],$data['DB_PWD'])
+        //$link=@new mysqli("{$data['DB_HOST']}:{$data['DB_PORT']}",$data['DB_USER'],$data['DB_PWD']);有bug，用下面这句连接
+        $link=@new mysqli($data['DB_HOST'],$data['DB_USER'],$data['DB_PWD'])//用这句连接
         // 获取错误信息
         $error=$link->connect_error;
         if (!is_null($error)) {
