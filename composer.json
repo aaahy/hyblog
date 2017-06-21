@@ -1,14 +1,14 @@
 {
-    "name": "bjyblog",
-    "description": "the bjyblog blog",
+    "name": "huyang",
+    "description": "the huyang blog",
     "type": "blog",
-    "keywords": ["bjyblog","thinkphp","blog"],
-    "homepage": "http://baijunyao.com",
+    "keywords": ["huyang","thinkphp","blog"],
+    "homepage": "http://47.94.172.49/hyblog",
     "license": "Apache2",
     "authors": [
         {
-            "name": "baijunyao",
-            "email": "baijunyao@baijunyao.com"
+            "name": "huyang",
+            "email": "aaahy2011@sina.com"
         }
     ],
     "require": {

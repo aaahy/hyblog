@@ -1,16 +1,16 @@
 {
-  "name": "baijunyao/thinkphp-bjyblog",
-  "version": "1.0.0",
-  "description": "白俊遥博客",
+  "name": "aaahy/hyblog",
+  "version": "0.1.0",
+  "description": "胡洋博客",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "白俊遥",
+    "胡洋",
     "博客"
   ],
-  "author": "baijunyao",
+  "author": "huyang",
   "license": "Apache2",
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",
