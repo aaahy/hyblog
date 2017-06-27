@@ -23,6 +23,13 @@ fis.match('/Template/default/**/*.scss', {
   rExt: '.css'
 })
 
+//部署到自己本地搭建的apache服务器上，而不是fis3内置的服务器
+fis.match('*',{
+    deploy:fis.plugin('local-deliver',{
+        to:'../../wamp/www'
+    })
+})
+
 // fis.match('*.png', {
 //   optimizer: fis.plugin('png-compressor')
 // });
